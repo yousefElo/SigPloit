@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 '''
 GTP Main
-
 Created on 18 June 2018
-
 @author: loay
+
+updated by yousefElo
+30/11/2023 : port code to python3
 '''
 import os
 import time
@@ -24,16 +25,16 @@ output_file ='results.csv'
 
 def gtpinfo():
     os.system('clear')
-    print " \033[31mInformation Gathering\033[0m ".center(105, "#")
-    print " \033[34mSelect an Attack from the below\033[0m ".center(105, "#")
-    print
-    print "   Attacks".rjust(10) + "\t\t\t\tDescription"
-    print "   --------                             ------------"
-    print "0) GTP Nodes Discovery".rjust(25) + "\t\tNE Discovery, using: EchoRequest,CreateSession,DeleteSession or DeleteBearer Messages"
-    print "1) TEID Allocation Discovery".rjust(31) + "\t\tTEID Discovery, using: CreateSession,ModifyBearer or CreateBearer Messages"
+    print(" \033[31mInformation Gathering\033[0m ".center(105, "#"))
+    print(" \033[34mSelect an Attack from the below\033[0m ".center(105, "#"))
+    print()
+    print("   Attacks".rjust(10) + "\t\t\t\tDescription")
+    print("   --------                             ------------")
+    print("0) GTP Nodes Discovery".rjust(25) + "\t\tNE Discovery, using: EchoRequest,CreateSession,DeleteSession or DeleteBearer Messages")
+    print("1) TEID Allocation Discovery".rjust(31) + "\t\tTEID Discovery, using: CreateSession,ModifyBearer or CreateBearer Messages")
 
-    print
-    print "or type back to go back to Attacks Menu".rjust(42)
+    print()
+    print("or type back to go back to Attacks Menu".rjust(42))
 
     choice = raw_input("\033[37m(\033[0m\033[2;31minfo\033[0m\033[37m)>\033[0m ")
 
@@ -42,23 +43,23 @@ def gtpinfo():
     elif choice == "1":
         gtp.info.teidiscover()
     elif choice == "back":
-  		gtpattacksv2()
+        gtpattacksv2()
     else:
-        print '\n\033[31m[-]Error:\033[0m Please Enter a Valid Choice (0-1)'
+        print('\n\033[31m[-]Error:\033[0m Please Enter a Valid Choice (0-1)')
         time.sleep(1.5)
         gtpinfo()
 
 def gtpfraud():
     os.system('clear')
-    print " \033[31mFraud\033[0m ".center(105, "#")
-    print " \033[34mSelect an Attack from the below\033[0m ".center(105, "#")
-    print
-    print "   Attacks".rjust(10) + "\t\t\t\tDescription"
-    print "   --------                             ------------"
-    print "0) Tunnel Hijack".rjust(19) + "\t\tTEID Hijack, using: ModifyBearerRequest Message, TunnelHijack.cnf"
+    print(" \033[31mFraud\033[0m ".center(105, "#"))
+    print(" \033[34mSelect an Attack from the below\033[0m ".center(105, "#"))
+    print()
+    print("   Attacks".rjust(10) + "\t\t\t\tDescription")
+    print("   --------                             ------------")
+    print("0) Tunnel Hijack".rjust(19) + "\t\tTEID Hijack, using: ModifyBearerRequest Message, TunnelHijack.cnf")
 
-    print
-    print "or type back to go back to Attacks Menu".rjust(42)
+    print()
+    print("or type back to go back to Attacks Menu".rjust(42))
 
     choice = raw_input("\033[37m(\033[0m\033[2;31minfo\033[0m\033[37m)>\033[0m ")
 
@@ -67,7 +68,7 @@ def gtpfraud():
     elif choice == "back":
         gtpattacksv2()
     else:
-        print '\n\033[31m[-]Error:\033[0m Please Enter a Valid Choice (0)'
+        print('\n\033[31m[-]Error:\033[0m Please Enter a Valid Choice (0)')
         time.sleep(1.5)
         gtpfraud()
 
@@ -76,13 +77,13 @@ def gtpfraud():
 def gtpattacksv2():
     os.system('clear')
 
-    print " \033[34mChoose From the Below Attack Categories\033[0m ".center(105, "#")
-    print
-    print "0) Information Gathering".rjust(27)
-    print "1) Fraud".rjust(11)
-    print
-    print "or type back to return to the main menu".rjust(42)
-    print
+    print(" \033[34mChoose From the Below Attack Categories\033[0m ".center(105, "#"))
+    print()
+    print("0) Information Gathering".rjust(27))
+    print("1) Fraud".rjust(11))
+    print()
+    print("or type back to return to the main menu".rjust(42))
+    print()
 
     choice = raw_input(
         "\033[37m(\033[0m\033[2;31mattacks\033[0m\033[37m)>\033[0m ")
@@ -94,7 +95,7 @@ def gtpattacksv2():
     elif choice == 'back':
     	sigploit.mainMenu()
     else:
-        print '\n\033[31m[-]Error:\033[0m Please Enter a Valid Choice (0-1)'
+        print('\n\033[31m[-]Error:\033[0m Please Enter a Valid Choice (0-1)')
         time.sleep(1.5)
         gtpattacksv2()
 
@@ -122,19 +123,19 @@ def helpmenu():
   
 
 def prep():
-    print
-    print "   Module".rjust(10) + "\t\tDescription"
-    print "   --------             ------------"
-    print "0) GTPv1".rjust(8) + "\t\t3G Data attacks"
-    print "1) GTPv2".rjust(8) + "\t\t4G Data attacks"
-    print
-    print "or type back to go back to Main Menu".rjust(39)
+    print()
+    print("   Module".rjust(10) + "\t\tDescription")
+    print("   --------             ------------")
+    print("0) GTPv1".rjust(8) + "\t\t3G Data attacks")
+    print("1) GTPv2".rjust(8) + "\t\t4G Data attacks")
+    print()
+    print("or type back to go back to Main Menu".rjust(39))
 
     choice = raw_input("\033[34mgtp\033[0m\033[37m>\033[0m ")
 
     if choice == "0":
-        print "\n\033[34m[*]\033[0mGTPv1 will be updated in version 2.1 release.."
-        print "\033[34m[*]\033[0mGoing back to GTP Menu"
+        print("\n\033[34m[*]\033[0mGTPv1 will be updated in version 2.1 release..")
+        print("\033[34m[*]\033[0mGoing back to GTP Menu")
         time.sleep(2)
         os.system('clear')
         prep()

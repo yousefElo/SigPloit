@@ -2,8 +2,10 @@
 
 """
 Created on 1 Feb 2018
-
 @author: loay
+
+updated by yousefElo
+30/11/2023 : port code to python3
 """
 
 import os
@@ -39,11 +41,11 @@ def sri():
                     if main_menu == 'y' or main_menu == 'yes':
                         sigploit.mainMenu()
                     elif main_menu == 'exit':
-                        print 'TCAP End...'
+                        print('TCAP End...')
                         sys.exit(0)
 
     except CalledProcessError as e:
-        print "\033[31m[-]Error:\033[0m%s Failed to Launch, %s" %(jar_file, e.message)
+        print("\033[31m[-]Error:\033[0m%s Failed to Launch, %s" %(jar_file, e.message))
         time.sleep(2)
         ss7main.ss7tracking()
 
@@ -66,11 +68,11 @@ def psi():
                     if main_menu == 'y' or main_menu == 'yes':
                         sigploit.mainMenu()
                     elif main_menu == 'exit':
-                        print 'TCAP End...'
+                        print('TCAP End...')
                         sys.exit(0)
 
     except CalledProcessError as e:
-       print "\033[31m[-]Error:\033[0m%s Failed to Launch, %s" %(jar_file, e.message)
+       print("\033[31m[-]Error:\033[0m%s Failed to Launch, %s" %(jar_file, e.message))
        time.sleep(2)
        ss7main.ss7tracking()
 
@@ -93,11 +95,11 @@ def srism():
                     if main_menu == 'y' or main_menu == 'yes':
                         sigploit.mainMenu()
                     elif main_menu == 'exit':
-                        print 'TCAP End...'
+                        print('TCAP End...')
                         sys.exit(0)
 
     except CalledProcessError as e:
-        print "\033[31m[-]Error:\033[0m%s Failed to Launch, %s" %(jar_file, e.message)
+        print("\033[31m[-]Error:\033[0m%s Failed to Launch, %s" %(jar_file, e.message))
         time.sleep(2)
         ss7main.ss7tracking()
 
@@ -120,11 +122,11 @@ def ati():
                     if main_menu == 'y' or main_menu == 'yes':
                         sigploit.mainMenu()
                     elif main_menu == 'exit':
-                        print 'TCAP End...'
+                        print('TCAP End...')
                         sys.exit(0)
 
     except CalledProcessError as e:
-        print "\033[31m[-]Error:\033[0m%s Failed to Launch, %s" %(jar_file, e.message)
+        print("\033[31m[-]Error:\033[0m%s Failed to Launch, %s" %(jar_file, e.message))
         time.sleep(2)
         ss7main.ss7tracking()
 
@@ -146,10 +148,10 @@ def srigprs():
                     if main_menu == 'y' or main_menu == 'yes':
                         sigploit.mainMenu()
                     elif main_menu == 'exit':
-                        print 'TCAP End...'
+                        print('TCAP End...')
                         sys.exit(0)
 
     except CalledProcessError as e:
-        print "\033[31m[-]Error:\033[0m%s Failed to Launch, %s" %(jar_file, e.message)
+        print("\033[31m[-]Error:\033[0m%s Failed to Launch, %s" %(jar_file, e.message))
         time.sleep(2)
         ss7main.ss7tracking()

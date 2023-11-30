@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 '''
 GTPv2 Information gathering attacks
-
 Created on 18 June 2018
-
 @author: loay
+
+updated by yousefElo
+30/11/2023 : port code to python3
 '''
 
 import os
@@ -13,7 +14,6 @@ import time
 import sigploit
 import gtpmain
 import time
-
 
 from attacks.info import discover_gtp_nodes
 from attacks.info import discover_teid_allocation
@@ -41,15 +41,15 @@ def nediscover():
 			elif 'back' in choice:
 				gtpmain.gtpattacksv2()
 			elif 'exit' in choice:
-				print '\nYou are now exiting SigPloit...'
+				print('\nYou are now exiting SigPloit...')
 				time.sleep(1)
 				sys.exit(0)
 			else:
-				print '\033[31m[-]Error:\033[0m invalid command, choose one of the below commands\n'
+				print('\033[31m[-]Error:\033[0m invalid command, choose one of the below commands\n')
 				gtpmain.helpmenu()
 
 	except Exception as e:
-		print "\033[31m[-]Error:\033[0mGTP Nodes Discovery Failed to Launch, " + str(e)
+		print("\033[31m[-]Error:\033[0mGTP Nodes Discovery Failed to Launch, " + str(e))
 		time.sleep(2)
 		gtpmain.gtpattacksv2()
 	
@@ -76,19 +76,19 @@ def teidiscover():
 			elif 'back' in choice:
 				gtpmain.gtpattacksv2()
 			elif 'exit' in choice:
-				print '\nYou are now exiting SigPloit...'
+				print('\nYou are now exiting SigPloit...')
 				time.sleep(1)
 				sys.exit(0)
 			else:
-				print '\033[31m[-]Error:\033[0m invalid command, choose one of the below commands\n'
+				print('\033[31m[-]Error:\033[0m invalid command, choose one of the below commands\n')
 				gtpmain.helpmenu()
 
 	except Exception as e:
-		print "\033[31m[-]Error:\033[0mGTP Nodes Discovery Failed to Launch, " + str(e)
+		print("\033[31m[-]Error:\033[0mGTP Nodes Discovery Failed to Launch, " + str(e))
 		time.sleep(2)
 		gtpmain.gtpattacksv2()
 
 def teidpredict():
 
 	script = "teid_sequence_predictability_index.py"
-	print 'teidpredict'
+	print('teidpredict')
