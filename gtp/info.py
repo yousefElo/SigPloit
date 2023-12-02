@@ -15,8 +15,8 @@ import sigploit
 import gtpmain
 import time
 
-from attacks.info import discover_gtp_nodes
-from attacks.info import discover_teid_allocation
+from .attacks.info import discover_gtp_nodes
+from .attacks.info import discover_teid_allocation
 
 
 

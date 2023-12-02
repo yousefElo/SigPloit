@@ -13,7 +13,7 @@ import time
 from IPy import IP
 from gtp_v2_core.utilities.utilities import logNormal, logErr, logOk 
 
-from globals import message_queue
+from .globals import message_queue
 
 class Sender(threading.Thread):
     '''
@@ -118,10 +118,10 @@ class Sender(threading.Thread):
                             info_msg = "NO bytes sent to %s"%(ip_str)
                         logNormal(info_msg, verbose = self.is_verbose, 
                                 TAG = self.TAG_NAME)                              
-                    except timeout, e:
+                    except(timeout, e):
                         logErr("%s TIMEOUT_ERROR"%(ip_str), TAG = self.TAG_NAME)                         
                         pass
-                    except error, e:
+                    except(error, e):
                         if e.errno == errno.ECONNREFUSED:
                             logErr("%s CONNECTION_REFUSED"%(ip_str), 
                                 TAG = self.TAG_NAME)                                   
@@ -141,7 +141,7 @@ class Sender(threading.Thread):
                                 TAG = self.TAG_NAME)    
                             break                         
                         pass
-                    except Exception, e:
+                    except(Exception, e):
                         logErr("%s GENERIC ERROR : reason %s"%(ip_str, e), 
                             TAG = self.TAG_NAME)                         
                         break                                 

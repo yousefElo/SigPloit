@@ -104,13 +104,13 @@ class Listener(threading.Thread):
                 count += 1
                 logNormal("RECEIVED #%d messages"%(count), verbose = self.is_verbose,
                           TAG = self.TAG_NAME)            
-            except timeout, e:
+            except(timeout, e):
                 if addr[0] :
                     logErr("%s TIMEOUT_ERROR"%(addr[0]), TAG = self.TAG_NAME)
                 else:
                     logErr("TIMEOUT_ERROR", TAG = self.TAG_NAME)                         
                 pass
-            except error, e:
+            except(error, e):
                 if e.errno == errno.EBADFD:
                     if addr[0] :                    
                         logErr("%s BAD_FILE_DESCRIPTOR_ERROR"%(addr[0]), 
@@ -128,7 +128,7 @@ class Listener(threading.Thread):
                 else:
                     logErr("UNKNOWN ERROR: %s"%(e), TAG = self.TAG_NAME) 
                     break
-            except Exception, e:
+            except(Exception, e):
                 logErr("GENERIC ERROR: %s"%(e), TAG = self.TAG_NAME)
                 break 
     

@@ -33,8 +33,8 @@
 # -*- coding: utf-8 -*-
 import random
 import struct
-from gtp_v2_information_element_base import *
-from gtp_v2_commons import *
+from .gtp_v2_information_element_base import *
+from .gtp_v2_commons import *
 
 '''
 TEID NOT PRESENT

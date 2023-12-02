@@ -1,13 +1,15 @@
 '''
 Created on 12 Sep 2017
-
 @author: lia
+
+updated by yousefElo
+30/11/2023 : port code to python3
 '''
 import random
 import struct
 
 from IPy import IP
-import gtp_v2_commons 
+from .gtp_v2_commons import *
 
 '''
     8     7     6     5     4     3     2     1    Octets
@@ -146,8 +148,8 @@ class Imsi (InformationElementBase):
         hex_imsi += ("f" + self.__val[14])
         
         if gtp_v2_commons.DEBUG :
-            print "imsi :", self.__val
-            print "hex imsi:", hex_imsi
+            print("imsi :"), self.__val
+            print("hex imsi:"), hex_imsi
         return bytearray.fromhex(hex_imsi)
     
 class Msisdn(InformationElementBase):
@@ -256,8 +258,8 @@ class MEIdentity(InformationElementBase) :
             hex_imei+=c1
             i += 2
         if gtp_v2_commons.DEBUG:
-            print "imei:", self.__val 
-            print "hex imei:", hex_imei
+            print("imei:"), self.__val 
+            print("hex imei:"), hex_imei
         return bytearray.fromhex(hex_imei)   
 
 class ServingNetwork(InformationElementBase):
