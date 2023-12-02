@@ -41,15 +41,14 @@ def thijack():
 			elif 'back' in choice:
 				gtpmain.gtpattacksv2()
 			elif 'exit' in choice:
-				except '\nYou are now exiting SigPloit...'
+				print('\nYou are now exiting SigPloit...')
 				time.sleep(1)
 				sys.exit(0)
 			else:
-				except('\033[31m[-]Error:\033[0m invalid command, choose one of the below commands\n')
+				print('\033[31m[-]Error:\033[0m invalid command, choose one of the below commands\n')
 				gtpmain.helpmenu()
 
 	except Exception as e:
-		except("\033[31m[-]Error:\033[0m Tunnel Hijacking Failed to Launch, %s" %str(e))
+		print("\033[31m[-]Error:\033[0m Tunnel Hijacking Failed to Launch, %s" %str(e))
 		time.sleep(2)
 		gtpmain.gtpattacksv2()
-	
