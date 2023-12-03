@@ -41,7 +41,7 @@ def ss7tracking():
     print()
     print("or type back to go back to Attacks Menu".rjust(42))
 
-    choice = raw_input(
+    choice = input(
         "\033[37m(\033[0m\033[2;31mtracking\033[0m\033[37m)>\033[0m ")
 
     if choice == "0":
@@ -75,7 +75,7 @@ def ss7interception():
     print()
     print("or type back to go back to Attacks Menu".rjust(42))
 
-    choice = raw_input(
+    choice = input(
         "\033[37m(\033[0m\033[2;31minterception\033[0m\033[37m)>\033[0m ")
 
     if choice == "0":
@@ -105,7 +105,7 @@ def ss7fraud():
     print()
     print("or type back to go back to Attacks Menu".rjust(42))
 
-    choice = raw_input(
+    choice = input(
         "\033[37m(\033[0m\033[2;31mfraud\033[0m\033[37m)>\033[0m ")
 
     if choice == "0":
@@ -137,7 +137,7 @@ def ss7dos():
     print()
     print("or type back to go back to Attacks Menu".rjust(42))
 
-    choice = raw_input(
+    choice = input(
         "\033[37m(\033[0m\033[2;31mdos\033[0m\033[37m)>\033[0m ")
 
     if choice == "0":
@@ -163,7 +163,7 @@ def attacksMenu():
     print("or type back to return to the main menu".rjust(42))
     print()
 
-    choice = raw_input(
+    choice = input(
         "\033[37m(\033[0m\033[2;31mattacks\033[0m\033[37m)>\033[0m ")
 
     if choice == "0":

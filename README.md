@@ -2,6 +2,13 @@
 - Rosalia D'Alessandro
 - Ilario Dal Grande
 
+- yousefElo : author of current fork
+
+
+# What is new in this fork
+
+This fork is to support Python 3 as Python 2 is already not available.  
+I tested this fork on Rocky Linux machine with Python 3.9 and  JDK 11.
 
 # SigPloit
 SigPloit a signaling security testing framework dedicated to Telecom Security professionals and reasearchers to pentest and exploit vulnerabilites in the signaling protocols used in mobile operators regardless of the geneartion being in use.
@@ -48,15 +55,15 @@ SigPloit is referenced in GSMA document FS.07 "SS7 and Sigtran Network Security"
 ## Installation and requirements
 The requirements for this project are:
 
-    1) Python 2.7
+    1) Python 3
     2) Java version 1.7 +
-    3) sudo apt-get install lksctp-tools
+    3) sudo dnf install lksctp-tools
     4) Linux machine
 
 To run use
 
     cd SigPloit
     
-    sudo pip2 install -r requirements.txt
+    sudo pip install -r requirements.txt
     
     python sigploit.py

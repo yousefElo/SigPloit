@@ -25,15 +25,15 @@ def purge():
     try:
         purgeMS = check_call(['java', '-jar', os.path.join(purge_path, jar_file)])
         if purgeMS == 0:
-            ds = raw_input('\nWould you like to go back to Fraud Menu? (y/n): ')
+            ds = input('\nWould you like to go back to Fraud Menu? (y/n): ')
             if ds == 'y' or ds == 'yes':
                 ss7main.ss7dos()
             elif ds == 'n' or ds == 'no':
-                attack_menu = raw_input('Would you like to choose another attacks category? (y/n): ')
+                attack_menu = input('Would you like to choose another attacks category? (y/n): ')
                 if attack_menu == 'y' or attack_menu == 'yes':
                     ss7main.attacksMenu()
                 elif attack_menu == 'n' or attack_menu == 'no':
-                    main_menu = raw_input('Would you like to go back to the main menu? (y/exit): ')
+                    main_menu = input('Would you like to go back to the main menu? (y/exit): ')
                     if main_menu == 'y' or main_menu == 'yes':
                         sigploit.mainMenu()
                     elif main_menu == 'exit':

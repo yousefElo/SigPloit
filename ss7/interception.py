@@ -25,15 +25,15 @@ def ul():
     try:
         updateLocation = check_call(['java', '-jar', os.path.join(ul_path, jar_file)])
         if updateLocation == 0:
-            it = raw_input('\nWould you like to go back to Interception Menu? (y/n): ')
+            it = input('\nWould you like to go back to Interception Menu? (y/n): ')
             if it == 'y' or it == 'yes':
                 ss7main.ss7interception()
             elif it == 'n' or it == 'no':
-                attack_menu = raw_input('Would you like to choose another attacks category? (y/n): ')
+                attack_menu = input('Would you like to choose another attacks category? (y/n): ')
                 if attack_menu == 'y' or attack_menu == 'yes':
                     ss7main.attacksMenu()
                 elif attack_menu == 'n' or attack_menu == 'no':
-                    main_menu = raw_input('Would you like to go back to the main menu? (y/exit): ')
+                    main_menu = input('Would you like to go back to the main menu? (y/exit): ')
                     if main_menu == 'y' or main_menu == 'yes':
                         sigploit.mainMenu()
                     elif main_menu == 'exit':
