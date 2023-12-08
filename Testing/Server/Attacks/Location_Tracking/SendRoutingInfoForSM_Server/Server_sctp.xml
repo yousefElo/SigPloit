@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<connectdelay value="10000"/>
+<servers>
+	<server name="SMSC02" started="true" hostAddress="192.168.56.102" hostPort="2906" ipChannelType="0" acceptAnonymousConnections="false" maxConcurrentConnectionsCount="0" extraHostAddresseSize="0">
+		<associations>
+			<string value="serverAsscoiation"/>
+		</associations>
+	</server>
+</servers>
+<associations>
+	<name value="serverAsscoiation"/>
+	<association name="serverAsscoiation" assoctype="SERVER" hostPort="0" peerAddress="192.168.56.101" peerPort="2905" serverName="SMSC02" ipChannelType="0" extraHostAddresseSize="0"/>
+</associations>
